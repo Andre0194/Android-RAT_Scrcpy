@@ -1,0 +1,6 @@
+## How to Use
+
+1. **Download [scrcpy](https://github.com/Genymobile/scrcpy/releases) and extract it.**
+2. Place `scrcpy_guide_runner.bat` and `scrcpy_guide.txt` in the same folder as `scrcpy.exe`.
+3. Double-click `Scrcpy.exe` and follow the interactive prompts.
+4. ✅ Done! You're mirroring Android with just a few keystrokes.
