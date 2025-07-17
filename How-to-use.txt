@@ -1,0 +1,101 @@
+==============================
+SCRCPY ANDROID MIRRORING GUIDE
+==============================
+
+REQUIREMENTS:
+-------------
+- scrcpy.exe and adb.exe (in same folder)
+- Android phone with Developer Mode enabled
+- USB Debugging turned ON
+- Optional: Phone and PC connected to same Wi-Fi for wireless use
+
+
+HOW TO RUN:
+===========
+
+1️⃣  USB Connection (One-time or regular use)
+---------------------------------------------
+1. Connect your phone via USB
+2. Enable USB debugging on your phone (Developer Options)
+3. Double-click scrcpy.exe or run in CMD:
+   scrcpy.exe
+
+If only one phone is connected, it will mirror immediately.
+
+
+2️⃣  Wireless Connection - Automatic Setup
+------------------------------------------
+(First time, connect USB cable. Later, wireless only.)
+
+1. Connect phone via USB
+2. Ensure phone & PC are on the same Wi-Fi network
+3. Run:
+   scrcpy.exe --tcpip
+
+It will auto-detect IP and launch scrcpy wirelessly.
+
+
+3️⃣  Wireless Connection - Manual Setup
+---------------------------------------
+1. Connect phone via USB
+2. Get phone's IP:
+   adb shell ip route
+   (Note the IP, e.g., 192.168.1.10)
+
+3. Enable TCP/IP:
+   adb tcpip 5555
+
+4. Disconnect USB cable
+
+5. Connect via IP:
+   adb connect 192.168.1.10:5555
+
+6. Launch scrcpy:
+   scrcpy.exe
+
+7. Optional:
+   adb disconnect   (after use)
+
+
+4️⃣  Multiple Devices (USB + WiFi, or more than one)
+-----------------------------------------------------
+Run with serial or IP:
+
+- Using serial:
+  scrcpy.exe -s SERIAL_NUMBER
+
+- Using IP:
+  scrcpy.exe --tcpip=192.168.1.10
+
+
+ADVANCED (Environment Variable)
+-------------------------------
+Set device serial/IP as env var:
+
+In PowerShell:
+  $env:ANDROID_SERIAL = '192.168.1.10'
+  scrcpy.exe
+
+In CMD:
+  set ANDROID_SERIAL=192.168.1.10
+  scrcpy.exe
+
+
+TROUBLESHOOTING:
+----------------
+- Authorize debugging popup on phone
+- Make sure drivers are installed
+- Restart ADB server if needed:
+  adb kill-server && adb start-server
+
+
+OPTIONAL TOOL:
+--------------
+AutoADB: Automatically launch scrcpy when a device is plugged in
+GitHub: https://github.com/rom1v/autoadb
+
+Example:
+  autoadb scrcpy -s '{}'
+
+
+Enjoy mirroring your Android screen! 🎉
