@@ -1,4 +1,5 @@
 # scrcpy-batch-launcher
+Run Builder.exe for launching GUI
 
 📱 scrcpy-batch-launcher
 
